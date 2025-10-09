@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
         sum += numbers[i];
     }
     double average = sum / 10.0;
-    average += 0.001;
+    average += 0.000000001;
     printf("%.2f\n", average);
     return 0;
 }
