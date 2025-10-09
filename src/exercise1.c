@@ -1,14 +1,23 @@
 #include <stdio.h>
-#include <math.h>
-int main(int argc, char** argv) {
-    double numbers[10];
-    double sum = 0.0;
+
+int main() {
+    double number;
+    long long sum_cents = 0;
+
     for (int i = 0; i < 10; i++) {
-        scanf("%lf", &numbers[i]);
-        sum += numbers[i];
+        scanf("%lf", &number);
+
+        sum_cents += (long long)(number * 100 + (number >= 0 ? 0.5 : -0.5));
     }
-    double average = sum / 10.0;
-    average = round(average * 100 + 1e-9) / 100;
+ 
+    long long average_cents = sum_cents / 10;
+    if (sum_cents % 10 >= 5) average_cents++;  /
+    else if (sum_cents % 10 <= -5) average_cents--;  
+    
+
+    double average = average_cents / 100.0;
+    
     printf("%.2f\n", average);
+    
     return 0;
 }
