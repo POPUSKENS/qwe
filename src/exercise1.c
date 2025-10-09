@@ -6,7 +6,8 @@ int main(int argc, char** argv) {
         scanf("%lf", &numbers[i]);
         sum += numbers[i];
     }
-    double average = sum / 10.0;
+    float average = sum / 10.0;
+    average = double average
     printf("%.2f\n", average);
     return 0;
 }
