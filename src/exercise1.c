@@ -11,7 +11,7 @@ int main() {
     }
  
     long long average_cents = sum_cents / 10;
-    if (sum_cents % 10 >= 5) average_cents++;  /
+    if (sum_cents % 10 >= 5) average_cents++;  
     else if (sum_cents % 10 <= -5) average_cents--;  
     
 
