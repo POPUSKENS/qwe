@@ -3,25 +3,26 @@
 #include <stdlib.h>
 
 int max_subarray_sum(int* nums, int size) {
-    int max_sum= -2147483647;
-    if( size==0){
+    int max_sum = -2147483648;
+    if(size == 0){
         return 0;
     }
-    for (int l=0; l < size; l++){
+    for(int l = 0; l < size; l++){
         for(int r = l; r < size; r++){
-            int temp_sum=0;
-            int temp=l;
+            int temp_sum = 0;
+            int temp = l;
             while(temp <= r){
-                temp_sum+=nums[temp];
+                temp_sum+= nums[temp];
                 temp++;
-            }s
-            if (temp_sum > max_sum){
-                max_sum=temp_sum;
+            }
+            if(temp_sum > max_sum){
+                max_sum = temp_sum;
             }
         }
     }
     return max_sum;
 }
+
 
 int length_of_lis(int* nums, int numsSize) {
     if (numsSize==0){
