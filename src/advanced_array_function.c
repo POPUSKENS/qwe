@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 int max_subarray_sum(int* nums, int size) {
-    return 0;
     int max_sum= -2147483647;
     if( size==0){
         return 0;
@@ -15,7 +14,7 @@ int max_subarray_sum(int* nums, int size) {
             while(temp <= r){
                 temp_sum+=nums[temp];
                 temp++;
-            }
+            }s
             if (temp_sum > max_sum){
                 max_sum=temp_sum;
             }
